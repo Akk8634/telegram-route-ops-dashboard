@@ -16,9 +16,9 @@ SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 # ========== CONFIG ==========
 GROUPS = [
     # use exact usernames or IDs
-    "group_username_1",
-    "group_username_2",
-    "group_username_3",
+    "Cityflo - Ops Associate",
+    "Daily Ops - Mumbai",
+    "Cityflo - Ops Quality",
 ]
 
 DASHBOARD_JSON_PATH = "dashboard/data.json"
