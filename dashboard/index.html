@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ops Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f6f7fb; margin:0; }
+    .wrap { max-width:1100px; margin:auto; padding:20px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { background:#fff; padding:20px; border-radius:10px; }
+    h1 { margin-bottom:8px; }
+    table { width:100%; border-collapse:collapse; margin-top:20px; }
+    th,td { padding:10px; border-bottom:1px solid #ddd; text-align:left; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Operations Dashboard</h1>
+    <p id="week"></p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Total Messages</h3>
+        <h2 id="totalMsgs">–</h2>
+      </div>
+      <div class="card">
+        <h3>Total Issues</h3>
+        <h2 id="totalIssues">–</h2>
+      </div>
+      <div class="card">
+        <h3>Issue %</h3>
+        <h2 id="issueRate">–</h2>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>Issue Topics</h3>
+      <canvas id="topicChart"></canvas>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>Route Summary</h3>
+      <table>
+        <thead>
+          <tr><th>Route</th><th>Total</th><th>Issues</th></tr>
+        </thead>
+        <tbody id="routeTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
